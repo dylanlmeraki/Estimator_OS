@@ -1,0 +1,28 @@
+{
+  "source_code": "sf_dbi_fee_resource",
+  "title": "SF DBI Fees Resource",
+  "source_url": "https://www.sf.gov/resource--2022--fees-department-building-inspection",
+  "source_type": "html_page",
+  "jurisdiction_scope": [
+    "San Francisco"
+  ],
+  "authority_type": "city_county",
+  "retrieved_at": "2026-03-30T00:00:00Z",
+  "effective_hint": "published Sept 1 2025",
+  "indexed_extract": {
+    "summary": "SF DBI publishes permit, plan review, and subject-specific fee tables, including new construction permit fees based on valuation.",
+    "key_points": [
+      "DBI fee resource is the canonical city page for permit/inspection fee references.",
+      "Fee tables are separated by subject and should be mirrored into fee schedule seed packs.",
+      "Supports placeholder generation tied to valuation and permit category."
+    ]
+  },
+  "normalization_targets": [
+    "fee_schedule_source",
+    "jurisdiction_rule_template",
+    "proposal_note_template"
+  ],
+  "seed_priority": "canonical",
+  "status": "indexed",
+  "notes": "Canonical SF DBI fee anchor; underlying tables still need mirroring by subject."
+}

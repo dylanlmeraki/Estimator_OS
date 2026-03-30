@@ -1,0 +1,50 @@
+{
+  "manifest_version": "0.1.0",
+  "dataset_code": "caltrans_equipment_seed_v0",
+  "canonical_owner": "Estimator.OS",
+  "source_family": "Caltrans",
+  "cadence": "annual_full_refresh + misc_rate_optional_incremental",
+  "canonical_tables": [
+    "equipment_rate_book",
+    "equipment_rate_entry"
+  ],
+  "ingestion_strategy": {
+    "mode": "csv_first",
+    "source_of_truth": "Caltrans Labor Surcharge & Equipment Rental Rate Book accessible CSV",
+    "notes": "Use accessible CSV as canonical v0 import. Miscellaneous equipment rates remain a secondary optional source path."
+  },
+  "sources": [
+    {
+      "source_id": "caltrans_equipment_rate_book_2025_04_01_2026_03_31",
+      "url": "https://dot.ca.gov/programs/construction/equipment-rental-rates-and-labor-surcharge",
+      "content_type": "html+csv_link",
+      "record_type": "equipment_rate_book",
+      "effective_start": "2025-04-01",
+      "effective_end": "2026-03-31",
+      "required": true
+    },
+    {
+      "source_id": "caltrans_misc_equipment_rates_current",
+      "url": "https://dot.ca.gov/programs/construction/equipment-rental-rates-and-labor-surcharge",
+      "content_type": "html+csv_link",
+      "record_type": "misc_rate_book",
+      "required": false
+    }
+  ],
+  "normalize_steps": [
+    "Load book header into equipment_rate_book with effective window and source metadata.",
+    "Load each row into equipment_rate_entry preserving code, description, rate basis, and raw source payload.",
+    "Mark Caltrans book rows as public_works_canonical = true.",
+    "Keep miscellaneous rates separate until mapped by operator to avoid contaminating the standard book."
+  ],
+  "first_pass_scope": {
+    "include_books": [
+      "2025-04-01_to_2026-03-31"
+    ],
+    "public_works_only": true,
+    "optional_extensions": [
+      "delivery policy supplement",
+      "ownership-vs-rental comparison notes from FAQ"
+    ]
+  }
+}

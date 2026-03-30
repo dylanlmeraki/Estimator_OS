@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://estimatoros.dev/schemas/source_mirror_asset.schema.json",
+  "title": "SourceMirrorAsset",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "source_code",
+    "asset_kind",
+    "asset_storage_key",
+    "asset_mime_type",
+    "checksum_sha256",
+    "mirrored_at",
+    "parser_status"
+  ],
+  "properties": {
+    "source_code": {
+      "type": "string"
+    },
+    "asset_kind": {
+      "type": "string",
+      "enum": [
+        "raw_pdf",
+        "raw_csv",
+        "raw_html",
+        "raw_json",
+        "markdown_extract",
+        "table_extract",
+        "ocr_extract"
+      ]
+    },
+    "asset_storage_key": {
+      "type": "string"
+    },
+    "asset_mime_type": {
+      "type": "string"
+    },
+    "checksum_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "byte_size": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "mirrored_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "parser_status": {
+      "type": "string",
+      "enum": [
+        "not_started",
+        "parsed",
+        "partial",
+        "failed"
+      ]
+    },
+    "metadata_json": {
+      "type": "object"
+    }
+  }
+}
+

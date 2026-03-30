@@ -1,0 +1,29 @@
+{
+  "source_code": "sf_public_works_general_excavation",
+  "title": "SF Public Works General Excavation Permit",
+  "source_url": "https://sfpublicworks.org/index.php/services/permits/general-excavation",
+  "source_type": "html_page",
+  "jurisdiction_scope": [
+    "San Francisco"
+  ],
+  "authority_type": "city_county",
+  "retrieved_at": "2026-03-30T00:00:00Z",
+  "effective_hint": "current",
+  "indexed_extract": {
+    "summary": "General Excavation permits require application, drawings, utility authorization, administrative and inspection fees, possible street space/no-parking fees, insurance, business registration, and a $25,000 street excavation bond.",
+    "key_points": [
+      "Permit fee generally combines administrative + inspection fees + supplemental fees.",
+      "Street Space and no-parking sign fees may also apply.",
+      "A $25,000 bond is required and should be modeled as a permit-path requirement rather than a fee line item."
+    ]
+  },
+  "normalization_targets": [
+    "permit_path_template",
+    "fee_schedule_source",
+    "jurisdiction_rule_template",
+    "checklist_template"
+  ],
+  "seed_priority": "high",
+  "status": "indexed",
+  "notes": "Important SF right-of-way permit logic source."
+}

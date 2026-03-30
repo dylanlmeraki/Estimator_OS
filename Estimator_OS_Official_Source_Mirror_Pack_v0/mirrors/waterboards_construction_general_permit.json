@@ -1,0 +1,28 @@
+{
+  "source_code": "waterboards_construction_general_permit",
+  "title": "Construction General Permit",
+  "source_url": "https://www.waterboards.ca.gov/santaana/water_issues/programs/stormwater/construction_general_permit.html",
+  "source_type": "html_page",
+  "jurisdiction_scope": [
+    "CA"
+  ],
+  "authority_type": "state",
+  "retrieved_at": "2026-03-30T00:00:00Z",
+  "effective_hint": "Order 2022-0057-DWQ",
+  "indexed_extract": {
+    "summary": "Projects disturbing one acre or more, or less than one acre as part of a larger common plan totaling one acre or more, require CGP coverage.",
+    "key_points": [
+      "This is a trigger rule, not a direct fee table.",
+      "Use for permit-path warnings, checklist items, and proposal assumptions.",
+      "Should generate not-applicable / warning / blocking outputs depending on site-disturbance inputs."
+    ]
+  },
+  "normalization_targets": [
+    "jurisdiction_rule_template",
+    "checklist_template",
+    "proposal_note_template"
+  ],
+  "seed_priority": "canonical",
+  "status": "indexed",
+  "notes": "Model as threshold logic with SMARTS workflow hints."
+}

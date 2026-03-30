@@ -1,0 +1,29 @@
+{
+  "source_code": "whitecap_search_pricing",
+  "title": "White Cap Site Search Pricing Snapshot",
+  "source_url": "https://www.whitecap.com/search/",
+  "source_type": "catalog_page",
+  "jurisdiction_scope": [
+    "Bay Area",
+    "branch-specific"
+  ],
+  "authority_type": "vendor",
+  "retrieved_at": "2026-03-30T00:00:00Z",
+  "effective_hint": "current snapshot",
+  "indexed_extract": {
+    "summary": "White Cap displays public item pricing but explicitly states item pricing and delivery options may vary based on location.",
+    "key_points": [
+      "Use as vendor/location-scoped evidence, not canonical price truth.",
+      "Supports price_confidence and location_scope modeling.",
+      "Good for public list-price observations and curated material seeds."
+    ]
+  },
+  "normalization_targets": [
+    "vendor_source_registry",
+    "material_price_observation",
+    "price_confidence_policy"
+  ],
+  "seed_priority": "high",
+  "status": "indexed",
+  "notes": "Vendor evidence source; do not promote directly to canonical rate books without review."
+}

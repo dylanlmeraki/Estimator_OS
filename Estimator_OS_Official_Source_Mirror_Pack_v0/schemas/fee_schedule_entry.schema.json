@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://estimatoros.dev/schemas/fee_schedule_entry.schema.json",
+  "title": "FeeScheduleEntry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "source_code",
+    "jurisdiction_code",
+    "fee_family",
+    "fee_code",
+    "fee_label",
+    "fee_basis_type"
+  ],
+  "properties": {
+    "source_code": {
+      "type": "string"
+    },
+    "jurisdiction_code": {
+      "type": "string"
+    },
+    "fee_family": {
+      "type": "string"
+    },
+    "fee_code": {
+      "type": "string"
+    },
+    "fee_label": {
+      "type": "string"
+    },
+    "fee_basis_type": {
+      "type": "string",
+      "enum": [
+        "flat",
+        "per_unit",
+        "formula",
+        "review",
+        "consultation",
+        "other"
+      ]
+    },
+    "fee_amount": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "currency_code": {
+      "type": "string",
+      "default": "USD"
+    },
+    "uom": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "formula_notes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "qualifier_notes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "effective_start": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "effective_end": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "metadata_json": {
+      "type": "object"
+    }
+  }
+}
+

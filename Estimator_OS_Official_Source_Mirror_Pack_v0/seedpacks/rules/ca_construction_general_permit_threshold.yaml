@@ -1,0 +1,60 @@
+schema_version: 1.0.0
+rule_code: ca_construction_general_permit_threshold
+rule_name: California Construction General Permit Threshold Check
+version: 2026-01-01
+status: active
+jurisdiction_scope:
+  state: CA
+  region: Statewide
+  counties: []
+  cities: []
+  project_types: [sitework, utility, infrastructure, mixed_use]
+  public_works_only: false
+effective:
+  effective_start: 2026-01-01
+sources:
+  - source_id: ca_cgp_faq_threshold
+    title: Construction Stormwater General Permit FAQs
+    url: https://www.waterboards.ca.gov/water_issues/programs/stormwater/const_permit_faqs.html
+    source_type: official_page
+    retrieved_at: 2026-03-29T00:00:00Z
+inputs:
+  - key: inputs.disturbed_acres
+    type: number
+    required: true
+    label: Disturbed acres
+    ui_component: number
+  - key: inputs.part_of_larger_common_plan
+    type: boolean
+    required: true
+    label: Part of larger common plan
+    ui_component: checkbox
+applicable_if:
+  or:
+    - ">=": [ {var: inputs.disturbed_acres}, 1 ]
+    - and:
+        - "<": [ {var: inputs.disturbed_acres}, 1 ]
+        - {var: inputs.part_of_larger_common_plan}
+outputs:
+  line_items:
+    - when: {"always": true}
+      section_key: environmental
+      description: SWPPP / Construction General Permit compliance placeholder
+      pricing_mode: placeholder
+      uom: ls
+      notes: Verify NOI, SWPPP, monitoring, and BMP assumptions.
+  proposal_notes:
+    - when: {"always": true}
+      text: Pricing includes placeholder for stormwater compliance where project disturbance triggers California Construction General Permit requirements.
+      audience: proposal_external
+      placement_key: environmental_assumptions
+  derived_fields:
+    - when: {"always": true}
+      key: compliance.requires_cgp
+      value_expr: true
+  flags:
+    - when: {"always": true}
+      flag_code: cgp_review_required
+      label: Construction General Permit applicability review required
+      severity: warning
+blockers: []

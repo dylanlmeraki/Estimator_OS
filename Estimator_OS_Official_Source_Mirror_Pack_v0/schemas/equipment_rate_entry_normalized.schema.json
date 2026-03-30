@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://estimatoros.dev/schemas/equipment_rate_entry_normalized.schema.json",
+  "title": "EquipmentRateEntryNormalized",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "source_code",
+    "rate_book_code",
+    "equipment_code",
+    "description",
+    "rate_period",
+    "currency_code",
+    "effective_start"
+  ],
+  "properties": {
+    "source_code": {
+      "type": "string"
+    },
+    "rate_book_code": {
+      "type": "string"
+    },
+    "equipment_code": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "category": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "rate_period": {
+      "type": "string",
+      "enum": [
+        "hourly",
+        "daily",
+        "weekly",
+        "monthly"
+      ]
+    },
+    "rate_amount": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "labor_surcharge_pct": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "currency_code": {
+      "type": "string",
+      "default": "USD"
+    },
+    "effective_start": {
+      "type": "string",
+      "format": "date"
+    },
+    "effective_end": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "metadata_json": {
+      "type": "object"
+    }
+  }
+}
+

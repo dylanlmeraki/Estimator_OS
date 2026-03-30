@@ -1,0 +1,69 @@
+{
+  "manifest_version": "0.1.0",
+  "dataset_code": "materials_catalog_seed_v0",
+  "canonical_owner": "Estimator.OS",
+  "source_family": "Vendor Catalog + Manual Curation",
+  "cadence": "manual_curation_weekly + targeted public refresh",
+  "canonical_tables": [
+    "vendor_source_registry",
+    "material_catalog_item",
+    "material_price_observation",
+    "rate_book_entries"
+  ],
+  "ingestion_strategy": {
+    "mode": "curated_catalog_plus_observations",
+    "source_of_truth": "Curated catalog CSV + public vendor observations + internal quotes",
+    "notes": "Do not treat public list prices as universal truth. Preserve vendor branch/location and price confidence on every observation."
+  },
+  "sources": [
+    {
+      "source_id": "white_cap_public_catalog",
+      "url": "https://www.whitecap.com/search/",
+      "content_type": "html",
+      "record_type": "vendor_catalog",
+      "location_variance_expected": true,
+      "required": true
+    },
+    {
+      "source_id": "materials_catalog_v0_csv",
+      "url": "./sources/materials_catalog_v0.csv",
+      "content_type": "csv",
+      "record_type": "curated_catalog",
+      "required": true
+    },
+    {
+      "source_id": "materials_public_price_samples_csv",
+      "url": "./sources/materials_public_price_samples.csv",
+      "content_type": "csv",
+      "record_type": "price_observations",
+      "required": true
+    }
+  ],
+  "normalize_steps": [
+    "Load curated materials taxonomy into material_catalog_item.",
+    "Load public price rows into material_price_observation with vendor source, branch scope, and confidence metadata.",
+    "Promote selected observations into canonical rate_book_entries only after operator approval.",
+    "Leave quote-only or call-for-price rows in catalog with null price but active procurement status."
+  ],
+  "first_pass_scope": {
+    "target_row_count_min": 100,
+    "target_row_count_max": 300,
+    "trade_focus": [
+      "site concrete",
+      "carpentry/formwork",
+      "traffic control",
+      "safety",
+      "erosion control",
+      "survey consumables",
+      "utility/sitework"
+    ],
+    "bay_area_location_scope": [
+      "San Francisco",
+      "Peninsula",
+      "East Bay",
+      "South Bay",
+      "North Bay",
+      "Regional"
+    ]
+  }
+}

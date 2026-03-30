@@ -1,0 +1,3 @@
+vendor_source_id,vendor_name,source_url,source_type,location_scope,price_variance_policy,default_confidence,notes
+white_cap_public_catalog,White Cap,https://www.whitecap.com/search/,vendor_catalog,branch/location scoped,pricing and delivery options vary by location,public_list_price,Use branch/location metadata on every price observation.
+internal_quote_upload,Internal Quote Upload,internal://quotes,internal,project-specific,quote-supersedes-public-list-price,quote,Canonical for final pricing when selected by estimator.

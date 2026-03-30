@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://estimatoros.dev/schemas/material_price_observation_normalized.schema.json",
+  "title": "MaterialPriceObservationNormalized",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "source_code",
+    "material_catalog_item_identity",
+    "vendor_source_code",
+    "price_confidence",
+    "observed_at",
+    "uom",
+    "currency_code"
+  ],
+  "properties": {
+    "source_code": {
+      "type": "string"
+    },
+    "material_catalog_item_identity": {
+      "type": "string"
+    },
+    "material_catalog_item_code": {
+      "type": "string"
+    },
+    "vendor_source_code": {
+      "type": "string"
+    },
+    "branch_name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "branch_city": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "branch_region": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "location_scope": {
+      "type": "string"
+    },
+    "public_price": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "price_confidence": {
+      "type": "string",
+      "enum": [
+        "public_list_price",
+        "branch_specific",
+        "quote",
+        "manual",
+        "benchmark"
+      ]
+    },
+    "uom": {
+      "type": "string"
+    },
+    "currency_code": {
+      "type": "string",
+      "default": "USD"
+    },
+    "source_url": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uri"
+    },
+    "observed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "effective_start": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "effective_end": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "raw_payload_json": {
+      "type": "object"
+    }
+  }
+}
+

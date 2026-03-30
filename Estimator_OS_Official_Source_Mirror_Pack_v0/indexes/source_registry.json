@@ -1,0 +1,286 @@
+[
+  {
+    "source_code": "dir_prevailing_wage_menu_2026_1",
+    "title": "DIR General Prevailing Wage Determinations Menu 2026-1",
+    "source_url": "https://www.dir.ca.gov/OPRL/2026-1/PWD/Determinations/Subtrades/jrnylist.html",
+    "source_type": "html_page",
+    "jurisdiction_scope": [
+      "CA",
+      "Bay Area counties"
+    ],
+    "authority_type": "state",
+    "retrieved_at": "2026-03-30T00:00:00Z",
+    "effective_hint": "2026-1",
+    "indexed_extract": {
+      "summary": "2026-1 general prevailing wage journeyman determinations index by county, including Alameda and Contra Costa with predetermined increase references.",
+      "key_points": [
+        "DIR publishes the current county menu for 2026-1 determinations.",
+        "This is the canonical navigation anchor for county/craft wage seeding.",
+        "Should drive cycle-aware seed ingestion rather than union-website-first logic."
+      ]
+    },
+    "normalization_targets": [
+      "wage_source",
+      "wage_determination",
+      "jurisdiction_rule_template"
+    ],
+    "seed_priority": "canonical",
+    "status": "indexed",
+    "notes": "Use as the canonical menu/root for Bay Area county wage crawl."
+  },
+  {
+    "source_code": "dir_apprenticeship_requirements",
+    "title": "DIR Apprenticeship Requirements",
+    "source_url": "https://dir.ca.gov/Public-Works/Apprentices.html",
+    "source_type": "html_page",
+    "jurisdiction_scope": [
+      "CA"
+    ],
+    "authority_type": "state",
+    "retrieved_at": "2026-03-30T00:00:00Z",
+    "effective_hint": "current",
+    "indexed_extract": {
+      "summary": "DIR states public works contracts valued at $30,000 or more carry an apprenticeship obligation, with DAS 140 and DAS 142 workflow and 1 apprentice hour per 5 journeyman hours.",
+      "key_points": [
+        "Public works contracts valued at $30,000+ require apprentices unless craft is not apprenticeable.",
+        "DAS 140 notice and DAS 142 dispatch request responsibilities are explicit.",
+        "Minimum ratio is one apprentice hour per five straight-time journeyman hours."
+      ]
+    },
+    "normalization_targets": [
+      "apprentice_ratio_rule",
+      "jurisdiction_rule_template",
+      "proposal_note_template"
+    ],
+    "seed_priority": "canonical",
+    "status": "indexed",
+    "notes": "Canonical public-works apprenticeship obligation source."
+  },
+  {
+    "source_code": "dir_minimum_ratios",
+    "title": "DIR Division of Apprenticeship Standards - Minimum Ratios",
+    "source_url": "https://www.dir.ca.gov/das/RatioExemption.htm",
+    "source_type": "html_page",
+    "jurisdiction_scope": [
+      "CA",
+      "Northern California",
+      "Southern California"
+    ],
+    "authority_type": "state",
+    "retrieved_at": "2026-03-30T00:00:00Z",
+    "effective_hint": "current",
+    "indexed_extract": {
+      "summary": "DIR explains the 1:5 minimum ratio and notes craft/program-specific exemptions, including Northern California Operating Engineers 1:4.",
+      "key_points": [
+        "Minimum ratio is 5 journeymen hours to 1 apprentice hour per craft, straight time only.",
+        "Specific programs may have different maximum/minimum ratios.",
+        "Northern California Operating Engineers example uses 1 apprentice for each 4 journeymen."
+      ]
+    },
+    "normalization_targets": [
+      "apprentice_ratio_rule",
+      "craft_ratio_override"
+    ],
+    "seed_priority": "high",
+    "status": "indexed",
+    "notes": "Important for modeling craft-specific ratio overrides separately from default rule."
+  },
+  {
+    "source_code": "caltrans_equipment_rate_book_page",
+    "title": "Caltrans Equipment Rental Rates and Labor Surcharge",
+    "source_url": "https://dot.ca.gov/programs/construction/equipment-rental-rates-and-labor-surcharge",
+    "source_type": "html_page",
+    "jurisdiction_scope": [
+      "CA"
+    ],
+    "authority_type": "state",
+    "retrieved_at": "2026-03-30T00:00:00Z",
+    "effective_hint": "04/01/2025-03/31/2026",
+    "indexed_extract": {
+      "summary": "Caltrans publishes labor surcharge and equipment rental rate books in PDF and accessible CSV, including 04/01/2025 through 03/31/2026.",
+      "key_points": [
+        "Accessible CSV files exist and should be treated as canonical public-works equipment seed inputs.",
+        "The current cycle listed is 04/01/2025 through 03/31/2026.",
+        "Model as effective-dated equipment rate books with ingestion manifests."
+      ]
+    },
+    "normalization_targets": [
+      "equipment_rate_book",
+      "equipment_rate_entry",
+      "source_registry"
+    ],
+    "seed_priority": "canonical",
+    "status": "indexed",
+    "notes": "Canonical public-works equipment rate source."
+  },
+  {
+    "source_code": "sf_dbi_fee_resource",
+    "title": "SF DBI Fees Resource",
+    "source_url": "https://www.sf.gov/resource--2022--fees-department-building-inspection",
+    "source_type": "html_page",
+    "jurisdiction_scope": [
+      "San Francisco"
+    ],
+    "authority_type": "city_county",
+    "retrieved_at": "2026-03-30T00:00:00Z",
+    "effective_hint": "published Sept 1 2025",
+    "indexed_extract": {
+      "summary": "SF DBI publishes permit, plan review, and subject-specific fee tables, including new construction permit fees based on valuation.",
+      "key_points": [
+        "DBI fee resource is the canonical city page for permit/inspection fee references.",
+        "Fee tables are separated by subject and should be mirrored into fee schedule seed packs.",
+        "Supports placeholder generation tied to valuation and permit category."
+      ]
+    },
+    "normalization_targets": [
+      "fee_schedule_source",
+      "jurisdiction_rule_template",
+      "proposal_note_template"
+    ],
+    "seed_priority": "canonical",
+    "status": "indexed",
+    "notes": "Canonical SF DBI fee anchor; underlying tables still need mirroring by subject."
+  },
+  {
+    "source_code": "sf_public_works_general_excavation",
+    "title": "SF Public Works General Excavation Permit",
+    "source_url": "https://sfpublicworks.org/index.php/services/permits/general-excavation",
+    "source_type": "html_page",
+    "jurisdiction_scope": [
+      "San Francisco"
+    ],
+    "authority_type": "city_county",
+    "retrieved_at": "2026-03-30T00:00:00Z",
+    "effective_hint": "current",
+    "indexed_extract": {
+      "summary": "General Excavation permits require application, drawings, utility authorization, administrative and inspection fees, possible street space/no-parking fees, insurance, business registration, and a $25,000 street excavation bond.",
+      "key_points": [
+        "Permit fee generally combines administrative + inspection fees + supplemental fees.",
+        "Street Space and no-parking sign fees may also apply.",
+        "A $25,000 bond is required and should be modeled as a permit-path requirement rather than a fee line item."
+      ]
+    },
+    "normalization_targets": [
+      "permit_path_template",
+      "fee_schedule_source",
+      "jurisdiction_rule_template",
+      "checklist_template"
+    ],
+    "seed_priority": "high",
+    "status": "indexed",
+    "notes": "Important SF right-of-way permit logic source."
+  },
+  {
+    "source_code": "sf_public_works_fee_schedule_pdf",
+    "title": "2025-2026 San Francisco Public Works Permit Fee Schedule",
+    "source_url": "https://sfpublicworks.org/sites/default/files/permit_fee_schedule.pdf",
+    "source_type": "pdf",
+    "jurisdiction_scope": [
+      "San Francisco"
+    ],
+    "authority_type": "city_county",
+    "retrieved_at": "2026-03-30T00:00:00Z",
+    "effective_hint": "2025-2026",
+    "indexed_extract": {
+      "summary": "Public Works permit fee schedule lists permit fee amounts and basis-of-fee entries, including street space and consultation/pre-application fees.",
+      "key_points": [
+        "Use as fee evidence source for right-of-way and excavation-related placeholders.",
+        "Needs PDF-to-markdown or table extraction for structured fee seeding.",
+        "Should be mirrored as a parsed fee schedule source document."
+      ]
+    },
+    "normalization_targets": [
+      "fee_schedule_source",
+      "fee_schedule_entry",
+      "jurisdiction_rule_template"
+    ],
+    "seed_priority": "canonical",
+    "status": "queued_for_download",
+    "notes": "Download and table-extract in the next mirror pass."
+  },
+  {
+    "source_code": "waterboards_construction_general_permit",
+    "title": "Construction General Permit",
+    "source_url": "https://www.waterboards.ca.gov/santaana/water_issues/programs/stormwater/construction_general_permit.html",
+    "source_type": "html_page",
+    "jurisdiction_scope": [
+      "CA"
+    ],
+    "authority_type": "state",
+    "retrieved_at": "2026-03-30T00:00:00Z",
+    "effective_hint": "Order 2022-0057-DWQ",
+    "indexed_extract": {
+      "summary": "Projects disturbing one acre or more, or less than one acre as part of a larger common plan totaling one acre or more, require CGP coverage.",
+      "key_points": [
+        "This is a trigger rule, not a direct fee table.",
+        "Use for permit-path warnings, checklist items, and proposal assumptions.",
+        "Should generate not-applicable / warning / blocking outputs depending on site-disturbance inputs."
+      ]
+    },
+    "normalization_targets": [
+      "jurisdiction_rule_template",
+      "checklist_template",
+      "proposal_note_template"
+    ],
+    "seed_priority": "canonical",
+    "status": "indexed",
+    "notes": "Model as threshold logic with SMARTS workflow hints."
+  },
+  {
+    "source_code": "baaqmd_reg11_rule2",
+    "title": "BAAQMD Regulation 11 Rule 2",
+    "source_url": "https://www.baaqmd.gov/~/media/dotgov/files/rules/reg-11-rule-2-asbestos-demolition-renovation-and-manufacturing/documents/rg1102.pdf?la=en",
+    "source_type": "pdf",
+    "jurisdiction_scope": [
+      "Bay Area"
+    ],
+    "authority_type": "regional",
+    "retrieved_at": "2026-03-30T00:00:00Z",
+    "effective_hint": "current pdf",
+    "indexed_extract": {
+      "summary": "Demolition/renovation asbestos notification generally requires 10 working days; certain small residential cases may allow 72-hour start with fees.",
+      "key_points": [
+        "This is a strong Bay Area trigger for demolition/renovation work packages.",
+        "Should create permit-path checklist notes and possible blocking/warning logic depending on scope.",
+        "Needs mirrored PDF + extracted structured trigger notes."
+      ]
+    },
+    "normalization_targets": [
+      "jurisdiction_rule_template",
+      "checklist_template",
+      "proposal_note_template"
+    ],
+    "seed_priority": "high",
+    "status": "queued_for_download",
+    "notes": "Regional compliance source for demo/renovation projects."
+  },
+  {
+    "source_code": "whitecap_search_pricing",
+    "title": "White Cap Site Search Pricing Snapshot",
+    "source_url": "https://www.whitecap.com/search/",
+    "source_type": "catalog_page",
+    "jurisdiction_scope": [
+      "Bay Area",
+      "branch-specific"
+    ],
+    "authority_type": "vendor",
+    "retrieved_at": "2026-03-30T00:00:00Z",
+    "effective_hint": "current snapshot",
+    "indexed_extract": {
+      "summary": "White Cap displays public item pricing but explicitly states item pricing and delivery options may vary based on location.",
+      "key_points": [
+        "Use as vendor/location-scoped evidence, not canonical price truth.",
+        "Supports price_confidence and location_scope modeling.",
+        "Good for public list-price observations and curated material seeds."
+      ]
+    },
+    "normalization_targets": [
+      "vendor_source_registry",
+      "material_price_observation",
+      "price_confidence_policy"
+    ],
+    "seed_priority": "high",
+    "status": "indexed",
+    "notes": "Vendor evidence source; do not promote directly to canonical rate books without review."
+  }
+]

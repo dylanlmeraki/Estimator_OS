@@ -1,0 +1,117 @@
+catalog_item_code,category,subcategory_code,description,uom,source_strategy,default_vendor_source_id,seed_price_usd,currency,price_confidence,location_scope,bay_area_priority,notes
+MAT-0001,site_concrete,bond_breaker,Form release agent,gal,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0002,site_concrete,form_tie,Snap tie / form tie,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0003,site_concrete,form_lumber,Form board 2x4 / 2x6,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0004,site_concrete,form_plywood,CDX / HDO form plywood,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0005,site_concrete,cure_compound,Concrete cure compound,gal,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0006,site_concrete,joint_filler,Expansion joint filler,lf,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0007,site_concrete,sealant,Concrete joint sealant,tube,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0008,site_concrete,rebar_dowel,Epoxy dowel adhesive,cartridge,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0009,site_concrete,anchor_bolt,Anchor bolt assembly,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0010,site_concrete,rebar_chair,Rebar chair / dobie,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0011,site_concrete,wire_ties,Tie wire,lb,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0012,site_concrete,forming_stake,Wood or steel stake,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0013,site_concrete,sawcut_blade,Diamond concrete blade,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0014,site_concrete,grout_nonshrink,Non-shrink grout,bag,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0015,rebar_accessories,rebar_3,Rebar #3,lf,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0016,rebar_accessories,rebar_4,Rebar #4,lf,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0017,rebar_accessories,rebar_5,Rebar #5,lf,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0018,rebar_accessories,epoxy_rebar,Epoxy coated rebar,lf,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0019,rebar_accessories,mesh_66,6x6 WWM / welded wire mesh,sheet,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0020,rebar_accessories,coupler,Mechanical rebar coupler,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0021,rebar_accessories,cap_safety,Rebar safety cap,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0022,rebar_accessories,splice_sleeve,Rebar splice sleeve,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0023,rebar_accessories,rebar_stirrup,Fabricated stirrup,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0024,rebar_accessories,rebar_ties,Pre-tied rebar ties,box,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0025,lumber_plywood,spf_2x4_10,2x4 x 10 SPF,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0026,lumber_plywood,spf_2x4_16,2x4 x 16 SPF/SYP,ea,curated_plus_observation,white_cap_public_catalog,16.59,USD,public_list_price,bay_area_branch,true,Public sample price present; pricing varies by branch/location.
+MAT-0027,lumber_plywood,df_2x8_16,2x8 x 16 Douglas Fir,ea,curated_plus_observation,white_cap_public_catalog,37.89,USD,public_list_price,bay_area_branch,true,Public sample price present; pricing varies by branch/location.
+MAT-0028,lumber_plywood,spf_2x10_16,2x10 x 16 SPF,ea,curated_plus_observation,white_cap_public_catalog,44.39,USD,public_list_price,bay_area_branch,true,Public sample price present; pricing varies by branch/location.
+MAT-0029,lumber_plywood,cdx_half,1/2 x 4x8 CDX plywood,ea,curated_plus_observation,white_cap_public_catalog,46.19,USD,public_list_price,bay_area_branch,true,Public sample price present; pricing varies by branch/location.
+MAT-0030,lumber_plywood,ply_3_4_hdo,3/4 x 4x8 HDO phenolic plyform,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0031,lumber_plywood,redwood_1x4,1x4 redwood merch,ft,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0032,lumber_plywood,redwood_1x6,1x6 redwood merch,ft,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0033,lumber_plywood,pressure_treated_2x4_16,2x4 x 16 PT,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0034,lumber_plywood,stakes_1x2,Survey / layout stakes,bundle,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0035,traffic_control,cone_28,28 in traffic cone,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0036,traffic_control,cone_36,36 in traffic cone,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0037,traffic_control,delineator_post,Delineator post,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0038,traffic_control,barricade_type2,Type II barricade,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0039,traffic_control,barricade_type3,Type III barricade,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0040,traffic_control,rollup_sign,Roll-up sign,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0041,traffic_control,sign_stand,Sign stand,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0042,traffic_control,sandbag,Sandbag,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0043,traffic_control,flashing_light,Barricade flasher,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0044,traffic_control,krail_marker,K-rail marker,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0045,site_safety,fire_extinguisher,ABC fire extinguisher,ea,curated_plus_observation,white_cap_public_catalog,236.99,USD,public_list_price,bay_area_branch,true,Public sample price present; pricing varies by branch/location.
+MAT-0046,site_safety,fire_extinguisher_stand,Fire extinguisher stand,ea,curated_plus_observation,white_cap_public_catalog,151.99,USD,public_list_price,bay_area_branch,true,Public sample price present; pricing varies by branch/location.
+MAT-0047,site_safety,first_aid_kit,First aid kit,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0048,site_safety,safety_fence,Orange safety fence,roll,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0049,site_safety,caution_tape,Caution tape,roll,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0050,site_safety,hard_hat,Hard hat,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0051,site_safety,vest_class2,Class 2 safety vest,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0052,site_safety,glove_general,General work gloves,pair,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0053,site_safety,hearing_protection,Hearing protection,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0054,site_safety,safety_glasses,Safety glasses,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0055,erosion_control,silt_fence,Silt fence,roll,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0056,erosion_control,fiber_roll,Fiber roll / wattles,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0057,erosion_control,inlet_protection,Storm drain inlet protection,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0058,erosion_control,plastic_sheathing,6 mil plastic sheeting,roll,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0059,erosion_control,staples_ec,Erosion control staples,box,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0060,erosion_control,mulch_blow,Hydromulch,bag,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0061,erosion_control,seed_mix,Seed mix,lb,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0062,erosion_control,straw_blanket,Straw blanket,roll,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0063,erosion_control,gravel_bag,Gravel bag,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0064,erosion_control,trackout_mat,Trackout mat,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0065,survey_consumables,marking_paint,Marking paint,can,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0066,survey_consumables,lath_bundle,Survey lath,bundle,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0067,survey_consumables,flagging_tape,Flagging tape,roll,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0068,survey_consumables,stakes_hub,Hub / nail stake,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0069,survey_consumables,nails_pk,PK nails,box,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0070,survey_consumables,mag_nails,Mag nails,box,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0071,survey_consumables,string_line,Mason line,roll,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0072,survey_consumables,chalk,Chalk / layout powder,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0073,utility_sitework,schedule40_2,PVC Sch 40 pipe 2 in,lf,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0074,utility_sitework,schedule40_4,PVC Sch 40 pipe 4 in,lf,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0075,utility_sitework,hdpe_4,HDPE pipe 4 in,lf,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0076,utility_sitework,conduit_2,Electrical conduit 2 in,lf,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0077,utility_sitework,pull_box,Pull box,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0078,utility_sitework,trench_shield_pad,Trench pad / crossing plate,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0079,utility_sitework,warning_tape,Underground warning tape,roll,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0080,utility_sitework,cleanout,PVC cleanout,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0081,utility_sitework,coupling_pvc,PVC coupling,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0082,utility_sitework,gate_valve_box,Valve box,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0083,utility_sitework,aggregate_base,Class 2 AB,ton,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0084,utility_sitework,drain_rock,Drain rock,ton,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0085,fasteners_hardware,anchor_wedge,Wedge anchor,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0086,fasteners_hardware,tapcon,Concrete screw / Tapcon,box,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0087,fasteners_hardware,simpson_hanger,Joist hanger,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0088,fasteners_hardware,epoxy_adhesive,Structural adhesive,cartridge,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0089,fasteners_hardware,hex_bolt,Galvanized hex bolt,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0090,fasteners_hardware,washer,Flat washer,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0091,fasteners_hardware,nut,Hex nut,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0092,fasteners_hardware,threaded_rod,Threaded rod,ft,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0093,fasteners_hardware,lag_screw,Lag screw,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0094,fasteners_hardware,deck_screw,Deck screw,box,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0095,fasteners_hardware,common_nail,Common nail,box,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0096,fasteners_hardware,framing_nail,Framing nail,box,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0097,fasteners_hardware,masonry_bit,Masonry drill bit,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0098,fasteners_hardware,caulk,Construction sealant,tube,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0099,cleanup_consumables,bucket_1,1 gal bucket,ea,curated_plus_observation,white_cap_public_catalog,5.89,USD,public_list_price,bay_area_branch,true,Public sample price present; pricing varies by branch/location.
+MAT-0100,cleanup_consumables,bucket_2,2 gal bucket,ea,curated_plus_observation,white_cap_public_catalog,9.69,USD,public_list_price,bay_area_branch,true,Public sample price present; pricing varies by branch/location.
+MAT-0101,cleanup_consumables,bucket_2w,2 gal white pail,ea,curated_plus_observation,white_cap_public_catalog,8.49,USD,public_list_price,bay_area_branch,true,Public sample price present; pricing varies by branch/location.
+MAT-0102,cleanup_consumables,trash_bag,Contractor trash bag,box,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0103,cleanup_consumables,broom_24,24 in broom head,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0104,cleanup_consumables,degreaser,All-purpose cleaner / degreaser,gal,curated_plus_observation,white_cap_public_catalog,26.99,USD,public_list_price,bay_area_branch,true,Public sample price present; pricing varies by branch/location.
+MAT-0105,cleanup_consumables,concrete_cleaner,Concrete cleaner / stripper,pail,curated_plus_observation,white_cap_public_catalog,476.99,USD,public_list_price,bay_area_branch,true,Public sample price present; pricing varies by branch/location.
+MAT-0106,cleanup_consumables,scrub_towels,Scrub towels / wipes,ea,curated_plus_observation,white_cap_public_catalog,36.99,USD,public_list_price,bay_area_branch,true,Public sample price present; pricing varies by branch/location.
+MAT-0107,cleanup_consumables,shop_rags,Shop rags,box,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0108,cleanup_consumables,spill_kit,Spill response kit,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0109,accessibility_site,truncated_dome_panel,ADA truncated dome panel,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0110,accessibility_site,detectable_warning_adhesive,Detectable warning adhesive,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0111,accessibility_site,ada_ramp_edge,ADA ramp edge form,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0112,accessibility_site,warning_paver,Warning paver panel,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0113,accessibility_site,curb_ramp_form,Curb ramp formwork package,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0114,accessibility_site,handrail_ss,Stainless grab bar / handrail component,ea,curated_plus_observation,white_cap_public_catalog,45.99,USD,public_list_price,bay_area_branch,true,Public sample price present; pricing varies by branch/location.
+MAT-0115,accessibility_site,broom_finish_tool,Concrete broom finish tool,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.
+MAT-0116,accessibility_site,edge_tool,Concrete edging tool,ea,curated_plus_observation,,,USD,structure_only,regional,true,Catalog seed only; populate with quote or approved public observation.

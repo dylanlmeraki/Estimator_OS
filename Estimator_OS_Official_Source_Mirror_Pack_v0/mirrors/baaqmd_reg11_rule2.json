@@ -1,0 +1,28 @@
+{
+  "source_code": "baaqmd_reg11_rule2",
+  "title": "BAAQMD Regulation 11 Rule 2",
+  "source_url": "https://www.baaqmd.gov/~/media/dotgov/files/rules/reg-11-rule-2-asbestos-demolition-renovation-and-manufacturing/documents/rg1102.pdf?la=en",
+  "source_type": "pdf",
+  "jurisdiction_scope": [
+    "Bay Area"
+  ],
+  "authority_type": "regional",
+  "retrieved_at": "2026-03-30T00:00:00Z",
+  "effective_hint": "current pdf",
+  "indexed_extract": {
+    "summary": "Demolition/renovation asbestos notification generally requires 10 working days; certain small residential cases may allow 72-hour start with fees.",
+    "key_points": [
+      "This is a strong Bay Area trigger for demolition/renovation work packages.",
+      "Should create permit-path checklist notes and possible blocking/warning logic depending on scope.",
+      "Needs mirrored PDF + extracted structured trigger notes."
+    ]
+  },
+  "normalization_targets": [
+    "jurisdiction_rule_template",
+    "checklist_template",
+    "proposal_note_template"
+  ],
+  "seed_priority": "high",
+  "status": "queued_for_download",
+  "notes": "Regional compliance source for demo/renovation projects."
+}

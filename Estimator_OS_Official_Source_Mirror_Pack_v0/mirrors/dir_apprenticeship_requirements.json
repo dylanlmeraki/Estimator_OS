@@ -1,0 +1,28 @@
+{
+  "source_code": "dir_apprenticeship_requirements",
+  "title": "DIR Apprenticeship Requirements",
+  "source_url": "https://dir.ca.gov/Public-Works/Apprentices.html",
+  "source_type": "html_page",
+  "jurisdiction_scope": [
+    "CA"
+  ],
+  "authority_type": "state",
+  "retrieved_at": "2026-03-30T00:00:00Z",
+  "effective_hint": "current",
+  "indexed_extract": {
+    "summary": "DIR states public works contracts valued at $30,000 or more carry an apprenticeship obligation, with DAS 140 and DAS 142 workflow and 1 apprentice hour per 5 journeyman hours.",
+    "key_points": [
+      "Public works contracts valued at $30,000+ require apprentices unless craft is not apprenticeable.",
+      "DAS 140 notice and DAS 142 dispatch request responsibilities are explicit.",
+      "Minimum ratio is one apprentice hour per five straight-time journeyman hours."
+    ]
+  },
+  "normalization_targets": [
+    "apprentice_ratio_rule",
+    "jurisdiction_rule_template",
+    "proposal_note_template"
+  ],
+  "seed_priority": "canonical",
+  "status": "indexed",
+  "notes": "Canonical public-works apprenticeship obligation source."
+}

@@ -1,0 +1,25 @@
+{
+  "manifest_version": "0.1.0",
+  "parser_code": "sf_public_works_fee_schedule_pdf_parser",
+  "parser_version": "0.1.0",
+  "source_code": "sf_public_works_fee_schedule_pdf",
+  "parse_family": "fee_schedule_pdf",
+  "source_type": "pdf",
+  "jurisdiction_code": "sf",
+  "output_tables": [
+    "fee_schedule_source",
+    "fee_schedule_entry"
+  ],
+  "required_outputs": [
+    "fee_family",
+    "fee_code",
+    "fee_label",
+    "fee_basis_type"
+  ],
+  "normalization_rules": [
+    "Map consultation and pre-application rows to fee_basis_type=consultation where explicitly stated.",
+    "Preserve unresolved formula text in formula_notes when amount cannot be parsed directly.",
+    "Carry PDF citation metadata into metadata_json."
+  ]
+}
+

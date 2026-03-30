@@ -1,0 +1,29 @@
+{
+  "source_code": "dir_prevailing_wage_menu_2026_1",
+  "title": "DIR General Prevailing Wage Determinations Menu 2026-1",
+  "source_url": "https://www.dir.ca.gov/OPRL/2026-1/PWD/Determinations/Subtrades/jrnylist.html",
+  "source_type": "html_page",
+  "jurisdiction_scope": [
+    "CA",
+    "Bay Area counties"
+  ],
+  "authority_type": "state",
+  "retrieved_at": "2026-03-30T00:00:00Z",
+  "effective_hint": "2026-1",
+  "indexed_extract": {
+    "summary": "2026-1 general prevailing wage journeyman determinations index by county, including Alameda and Contra Costa with predetermined increase references.",
+    "key_points": [
+      "DIR publishes the current county menu for 2026-1 determinations.",
+      "This is the canonical navigation anchor for county/craft wage seeding.",
+      "Should drive cycle-aware seed ingestion rather than union-website-first logic."
+    ]
+  },
+  "normalization_targets": [
+    "wage_source",
+    "wage_determination",
+    "jurisdiction_rule_template"
+  ],
+  "seed_priority": "canonical",
+  "status": "indexed",
+  "notes": "Use as the canonical menu/root for Bay Area county wage crawl."
+}

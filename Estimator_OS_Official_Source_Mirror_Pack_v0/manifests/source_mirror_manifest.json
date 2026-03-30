@@ -1,0 +1,18 @@
+{
+  "dataset_code": "official_source_mirror_pack_v0",
+  "manifest_version": "0.1.0",
+  "description": "Authoritative-source mirror/index pack for Estimator.OS pricing, wages, permit-path, and compliance seeds.",
+  "source_count": 10,
+  "canonical_sources": [
+    "dir_prevailing_wage_menu_2026_1",
+    "dir_apprenticeship_requirements",
+    "caltrans_equipment_rate_book_page",
+    "sf_dbi_fee_resource",
+    "sf_public_works_fee_schedule_pdf",
+    "waterboards_construction_general_permit"
+  ],
+  "next_download_targets": [
+    "sf_public_works_fee_schedule_pdf",
+    "baaqmd_reg11_rule2"
+  ]
+}

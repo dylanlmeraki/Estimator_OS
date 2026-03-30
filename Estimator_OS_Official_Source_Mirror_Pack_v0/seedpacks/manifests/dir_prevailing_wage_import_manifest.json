@@ -1,0 +1,88 @@
+{
+  "manifest_version": "0.1.0",
+  "dataset_code": "dir_prevailing_wage_seed_v0",
+  "canonical_owner": "Estimator.OS",
+  "source_family": "DIR",
+  "cadence": "semiannual_check + manual hotfix review",
+  "canonical_tables": [
+    "wage_source",
+    "wage_determination",
+    "apprentice_ratio_rule"
+  ],
+  "ingestion_strategy": {
+    "mode": "seed_bootstrap_then_incremental",
+    "source_of_truth": "DIR prevailing wage determinations and DAS apprenticeship/public works pages",
+    "notes": "Use DIR as canonical for public works wage rates; union sheets may be stored as supplemental sources but do not override DIR without explicit operator review."
+  },
+  "sources": [
+    {
+      "source_id": "dir_pwd_journeyman_menu_2026_1",
+      "url": "https://www.dir.ca.gov/DLSR/PWD/",
+      "content_type": "html",
+      "record_type": "journeyman_menu",
+      "cycle": "2026-1",
+      "required": true
+    },
+    {
+      "source_id": "dir_pwd_apprentice_menu_2026_1",
+      "url": "https://www.dir.ca.gov/DLSR/PWD/",
+      "content_type": "html",
+      "record_type": "apprentice_menu",
+      "cycle": "2026-1",
+      "required": true
+    },
+    {
+      "source_id": "dir_das_publicworks_requirements",
+      "url": "https://www.dir.ca.gov/das/publicworks.html",
+      "content_type": "html",
+      "record_type": "apprenticeship_obligations",
+      "required": true
+    },
+    {
+      "source_id": "dir_das_140_form",
+      "url": "https://dir.ca.gov/DAS/DASForm140.pdf",
+      "content_type": "pdf",
+      "record_type": "form_reference",
+      "required": true
+    },
+    {
+      "source_id": "dir_das_142_form",
+      "url": "https://www.dir.ca.gov/das/dasform142.pdf",
+      "content_type": "pdf",
+      "record_type": "form_reference",
+      "required": true
+    }
+  ],
+  "normalize_steps": [
+    "Pin cycle and source_url on every wage_source row.",
+    "Explode county/craft/classification into wage_determination rows.",
+    "Store journeyman and apprentice determinations separately but link by craft and cycle where possible.",
+    "Persist ratio baseline 1 apprentice hour : 5 straight-time journeyman hours as statewide default in apprentice_ratio_rule.",
+    "Emit checklist note templates for DAS 140 / DAS 142 and CAC training fund obligations."
+  ],
+  "first_pass_scope": {
+    "counties": [
+      "San Francisco",
+      "San Mateo",
+      "Alameda",
+      "Santa Clara",
+      "Contra Costa",
+      "Marin"
+    ],
+    "crafts_priority": [
+      "laborer",
+      "operating_engineer",
+      "carpenter",
+      "cement_mason",
+      "electrician",
+      "plumber",
+      "ironworker",
+      "surveyor"
+    ],
+    "exclude_in_v0": [
+      "residential prevailing wage",
+      "hauling special cases",
+      "fuel reduction special determinations"
+    ]
+  }
+}

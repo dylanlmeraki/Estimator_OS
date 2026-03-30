@@ -1,0 +1,258 @@
+{
+  "schema_version": "1.0.0",
+  "rule_id": "sf_dbi_fee_placeholder",
+  "rule_code": "sf_dbi_fee_placeholder",
+  "rule_name": "San Francisco DBI Permit/Plan Review Placeholder",
+  "version": "2026-01-01",
+  "status": "active",
+  "engine": {
+    "authoring_format": "yaml",
+    "canonical_format": "json",
+    "execution_ir": "jsonlogic"
+  },
+  "jurisdiction_scope": {
+    "state": "CA",
+    "region": "Bay Area",
+    "counties": [
+      "San Francisco"
+    ],
+    "cities": [
+      "San Francisco"
+    ],
+    "project_types": [
+      "building",
+      "tenant_improvement",
+      "mixed_use"
+    ],
+    "public_works_only": false
+  },
+  "effective": {
+    "effective_start": "2026-01-01",
+    "effective_end": null,
+    "timezone": "America/Los_Angeles"
+  },
+  "sources": [
+    {
+      "source_id": "sf_dbi_fee_schedule_2025_09_01",
+      "title": "Fees for the Department of Building Inspection",
+      "url": "https://www.sf.gov/resource--2022--fees-department-building-inspection/",
+      "source_type": "official_page",
+      "retrieved_at": "2026-03-29T00:00:00Z",
+      "notes": "Use as source registry record; parse fee tables into canonical formula refs rather than embedding fragile scraped tables in rule text."
+    }
+  ],
+  "inputs": [
+    {
+      "key": "opportunity.jurisdiction_preset",
+      "type": "enum",
+      "required": true,
+      "label": "Jurisdiction",
+      "enum_values": [
+        "sf",
+        "oakland",
+        "san_mateo_county",
+        "caltrans",
+        "custom"
+      ],
+      "ui_component": "hidden"
+    },
+    {
+      "key": "inputs.valuation",
+      "type": "number",
+      "required": true,
+      "label": "Estimated permit valuation",
+      "ui_component": "number"
+    },
+    {
+      "key": "inputs.permit_category",
+      "type": "enum",
+      "required": true,
+      "label": "Permit category",
+      "enum_values": [
+        "new_construction",
+        "alteration",
+        "no_plans",
+        "specialty"
+      ],
+      "ui_component": "select"
+    }
+  ],
+  "applicable_if": {
+    "and": [
+      {
+        "==": [
+          {
+            "var": "opportunity.jurisdiction_preset"
+          },
+          "sf"
+        ]
+      },
+      {
+        ">": [
+          {
+            "var": "inputs.valuation"
+          },
+          0
+        ]
+      }
+    ]
+  },
+  "outputs": {
+    "line_items": [
+      {
+        "when": {
+          "==": [
+            {
+              "var": "inputs.permit_category"
+            },
+            "new_construction"
+          ]
+        },
+        "section_key": "permits",
+        "description": "SF DBI new construction permit / plan review placeholder",
+        "pricing_mode": "formula",
+        "formula_ref": "sf_dbi_table_1aa_new_construction_v2026",
+        "uom": "ls",
+        "quantity_expr": {
+          "var": "inputs.valuation"
+        },
+        "notes": "Calculated from official fee table snapshot maintained separately."
+      }
+    ],
+    "proposal_notes": [
+      {
+        "when": {
+          "var": "opportunity.public_works_flag"
+        },
+        "text": "Permit and inspection fees assumed per current SF DBI fee tables and project valuation. Final pricing subject to agency determination.",
+        "audience": "proposal_external",
+        "placement_key": "permitting_assumptions"
+      }
+    ],
+    "derived_fields": [
+      {
+        "when": {
+          "always": true
+        },
+        "key": "permit_path.requires_building_permit",
+        "value_expr": true
+      }
+    ],
+    "flags": [
+      {
+        "when": {
+          "always": true
+        },
+        "flag_code": "sf_dbi_fee_review_required",
+        "label": "Review SF DBI fee placeholder before publish",
+        "severity": "warning"
+      }
+    ]
+  },
+  "blockers": [
+    {
+      "when": {
+        "!": {
+          "var": "inputs.valuation"
+        }
+      },
+      "code": "missing_valuation",
+      "message": "Estimated permit valuation is required before publish.",
+      "severity": "blocking",
+      "category": "permit_fees"
+    }
+  ],
+  "compiled": {
+    "compiler_version": "seed-pack-v0.1.0",
+    "compile_hash": "11a0142bcc6ae74b83f8715d232d470717ecf10d4143bc18b853f62a92f9c561",
+    "compiled_at": "2026-03-29T00:00:00Z",
+    "jsonlogic": {
+      "applicable_if": {
+        "and": [
+          {
+            "==": [
+              {
+                "var": "opportunity.jurisdiction_preset"
+              },
+              "sf"
+            ]
+          },
+          {
+            ">": [
+              {
+                "var": "inputs.valuation"
+              },
+              0
+            ]
+          }
+        ]
+      },
+      "outputs": {
+        "line_items": [
+          {
+            "when": {
+              "==": [
+                {
+                  "var": "inputs.permit_category"
+                },
+                "new_construction"
+              ]
+            },
+            "section_key": "permits",
+            "description": "SF DBI new construction permit / plan review placeholder",
+            "pricing_mode": "formula",
+            "formula_ref": "sf_dbi_table_1aa_new_construction_v2026",
+            "uom": "ls",
+            "quantity_expr": {
+              "var": "inputs.valuation"
+            },
+            "notes": "Calculated from official fee table snapshot maintained separately."
+          }
+        ],
+        "proposal_notes": [
+          {
+            "when": {
+              "var": "opportunity.public_works_flag"
+            },
+            "text": "Permit and inspection fees assumed per current SF DBI fee tables and project valuation. Final pricing subject to agency determination.",
+            "audience": "proposal_external",
+            "placement_key": "permitting_assumptions"
+          }
+        ],
+        "derived_fields": [
+          {
+            "when": {
+              "always": true
+            },
+            "key": "permit_path.requires_building_permit",
+            "value_expr": true
+          }
+        ],
+        "flags": [
+          {
+            "when": {
+              "always": true
+            },
+            "flag_code": "sf_dbi_fee_review_required",
+            "label": "Review SF DBI fee placeholder before publish",
+            "severity": "warning"
+          }
+        ]
+      },
+      "blockers": [
+        {
+          "when": {
+            "!": {
+              "var": "inputs.valuation"
+            }
+          },
+          "code": "missing_valuation",
+          "message": "Estimated permit valuation is required before publish.",
+          "severity": "blocking",
+          "category": "permit_fees"
+        }
+      ]
+    },
+    "canonical_sha256": "bd891060379f13ac891824e37c30e986daed237258d00346a5b3b7263ef4e651"
+  }
+}

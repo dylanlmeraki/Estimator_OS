@@ -1,0 +1,90 @@
+schema_version: 1.0.0
+rule_code: dir_public_works_apprenticeship
+rule_name: California Public Works Apprenticeship Ratio + Notice Logic
+version: 2026-01-01
+status: active
+jurisdiction_scope:
+  state: CA
+  region: Statewide
+  counties: []
+  cities: []
+  project_types: [public_works, infrastructure, utility, streetscape]
+  public_works_only: true
+effective:
+  effective_start: 2026-01-01
+sources:
+  - source_id: dir_pwd_journeyman_menu_2026_1
+    title: Director's General Prevailing Wage Determinations
+    url: https://www.dir.ca.gov/DLSR/PWD/
+    source_type: official_page
+    retrieved_at: 2026-03-29T00:00:00Z
+  - source_id: dir_das_publicworks_requirements
+    title: Public Works Apprenticeship Requirements
+    url: https://www.dir.ca.gov/das/publicworks.html
+    source_type: official_page
+    retrieved_at: 2026-03-29T00:00:00Z
+inputs:
+  - key: opportunity.public_works_flag
+    type: boolean
+    required: true
+    label: Public works
+    ui_component: hidden
+  - key: inputs.contract_amount
+    type: number
+    required: true
+    label: Total contract amount
+    ui_component: number
+  - key: inputs.craft_code
+    type: string
+    required: true
+    label: Craft code
+    ui_component: select
+  - key: inputs.estimated_journeyman_st_hours
+    type: number
+    required: true
+    label: Estimated straight-time journeyman hours
+    ui_component: number
+  - key: inputs.is_apprenticeable_craft
+    type: boolean
+    required: true
+    label: Apprenticeable craft
+    ui_component: hidden
+applicable_if:
+  and:
+    - {var: opportunity.public_works_flag}
+    - ">=": [ {var: inputs.contract_amount}, 30000 ]
+    - {var: inputs.is_apprenticeable_craft}
+outputs:
+  line_items:
+    - when: {"always": true}
+      section_key: labor_compliance
+      description: CAC / apprenticeship training fund placeholder
+      pricing_mode: placeholder
+      uom: ls
+      notes: Amount depends on prevailing wage determination and training contribution obligations.
+  proposal_notes:
+    - when: {"always": true}
+      text: Public works labor pricing assumes compliance with current DIR prevailing wage and apprenticeship obligations, including DAS 140 / DAS 142 workflow where applicable.
+      audience: proposal_external
+      placement_key: labor_basis
+  derived_fields:
+    - when: {"always": true}
+      key: labor.apprentice_hours_minimum
+      value_expr:
+        "/": [ {var: inputs.estimated_journeyman_st_hours}, 5 ]
+  flags:
+    - when: {"always": true}
+      flag_code: das_140_required
+      label: DAS 140 required after award
+      severity: warning
+    - when: {"always": true}
+      flag_code: das_142_required
+      label: DAS 142 request required before apprentice dispatch
+      severity: warning
+blockers:
+  - when:
+      "<=": [ {var: inputs.estimated_journeyman_st_hours}, 0 ]
+    code: missing_journeyman_hours
+    message: Straight-time journeyman hours are required to compute apprentice ratio.
+    severity: blocking
+    category: labor_compliance

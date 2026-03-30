@@ -1,0 +1,59 @@
+{
+  "RuleCompileRequest": {
+    "ruleCode": "sf_dbi_fee_placeholder",
+    "authoringFormat": "yaml",
+    "authoringPayload": "seedpacks/rules/sf_dbi_fee_placeholder.yaml",
+    "compilerVersion": "seed-pack-v0.1.0"
+  },
+  "RuleCompileResponse": {
+    "ruleId": "sf_dbi_fee_placeholder",
+    "version": "2026-01-01",
+    "compileHash": "11a0142bcc6ae74b83f8715d232d470717ecf10d4143bc18b853f62a92f9c561",
+    "compiledAt": "2026-03-29T00:00:00Z",
+    "executionIR": "jsonlogic",
+    "canonicalRulePath": "examples/sf_dbi_fee_placeholder.rule.json"
+  },
+  "DIRWageImportRow": {
+    "sourceCode": "dir_pwd_journeyman_menu_2026_1",
+    "countyCode": "SF",
+    "countyName": "San Francisco",
+    "craftCode": "laborer",
+    "classificationCode": "group_1",
+    "classificationName": "Laborer Group 1",
+    "rateType": "journeyman",
+    "baseHourly": 0,
+    "fringeTotalHourly": 0,
+    "effectiveStart": "2026-02-22",
+    "effectiveEnd": null,
+    "rawLineJson": {}
+  },
+  "EquipmentRateImportRow": {
+    "sourceCode": "caltrans_equipment_rate_book_2025_04_01_2026_03_31",
+    "equipmentCode": "EXC-001",
+    "equipmentName": "Excavator",
+    "rateHourly": null,
+    "rateDaily": null,
+    "rateWeekly": null,
+    "rateMonthly": null,
+    "rawLineJson": {}
+  },
+  "MaterialCatalogBulkUpsertRequest": {
+    "catalogFile": "seedpacks/sources/materials_catalog_v0.csv",
+    "observationFile": "seedpacks/sources/materials_public_price_samples.csv",
+    "vendorRegistryFile": "seedpacks/sources/vendor_source_registry.csv",
+    "mode": "upsert"
+  },
+  "SearchDocumentSeedExample": {
+    "organizationId": "uuid",
+    "objectType": "rule_evaluation",
+    "title": "DIR Public Works Apprenticeship",
+    "subtitle": "blocked / missing_journeyman_hours",
+    "bodyText": "Public works apprenticeship ratio evaluation blocked for opportunity OPP-1042 because estimated journeyman ST hours were not supplied.",
+    "tags": [
+      "rule",
+      "labor",
+      "public_works",
+      "blocked"
+    ]
+  }
+}

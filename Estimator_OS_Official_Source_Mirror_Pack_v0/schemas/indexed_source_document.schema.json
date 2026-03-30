@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://estimatoros.dev/schemas/indexed_source_document.schema.json",
+  "title": "IndexedSourceDocument",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "source_code",
+    "title",
+    "source_url",
+    "source_type",
+    "authority_type",
+    "jurisdiction_scope",
+    "retrieved_at",
+    "indexed_extract",
+    "normalization_targets",
+    "seed_priority",
+    "status"
+  ],
+  "properties": {
+    "source_code": {
+      "type": "string",
+      "minLength": 1
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "source_type": {
+      "type": "string",
+      "enum": [
+        "html_page",
+        "pdf",
+        "csv",
+        "json",
+        "doc",
+        "manual_note",
+        "catalog_page",
+        "search_result_snapshot"
+      ]
+    },
+    "authority_type": {
+      "type": "string",
+      "enum": [
+        "federal",
+        "state",
+        "regional",
+        "county",
+        "city_county",
+        "vendor",
+        "internal",
+        "industry_reference"
+      ]
+    },
+    "jurisdiction_scope": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "effective_hint": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "retrieved_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "indexed_extract": {
+      "type": "object"
+    },
+    "normalization_targets": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "seed_priority": {
+      "type": "string",
+      "enum": [
+        "canonical",
+        "high",
+        "medium",
+        "low"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "indexed",
+        "queued_for_download",
+        "mirrored",
+        "queued_for_parse",
+        "parsed",
+        "promoted",
+        "superseded",
+        "error"
+      ]
+    },
+    "notes": {
+      "type": "string"
+    },
+    "metadata_json": {
+      "type": "object"
+    }
+  }
+}

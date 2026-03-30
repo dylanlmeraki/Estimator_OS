@@ -1,0 +1,25 @@
+{
+  "manifest_version": "0.1.0",
+  "parser_code": "baaqmd_rule_11_2_parser",
+  "parser_version": "0.1.0",
+  "source_code": "baaqmd_reg11_rule2",
+  "parse_family": "regulatory_pdf",
+  "source_type": "pdf",
+  "jurisdiction_code": "bay_area",
+  "output_tables": [
+    "jurisdiction_rule_template_candidates",
+    "checklist_template_candidates",
+    "proposal_note_template_candidates"
+  ],
+  "required_outputs": [
+    "rule_code",
+    "trigger_type",
+    "output_type"
+  ],
+  "normalization_rules": [
+    "Emit trigger/checklist/proposal-note candidates; do not emit direct fee schedule rows.",
+    "Preserve notice timing and exception text in notes fields.",
+    "Flag ambiguous legal text as review_required=true in metadata_json."
+  ]
+}
+

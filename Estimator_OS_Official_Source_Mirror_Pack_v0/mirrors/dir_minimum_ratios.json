@@ -1,0 +1,29 @@
+{
+  "source_code": "dir_minimum_ratios",
+  "title": "DIR Division of Apprenticeship Standards - Minimum Ratios",
+  "source_url": "https://www.dir.ca.gov/das/RatioExemption.htm",
+  "source_type": "html_page",
+  "jurisdiction_scope": [
+    "CA",
+    "Northern California",
+    "Southern California"
+  ],
+  "authority_type": "state",
+  "retrieved_at": "2026-03-30T00:00:00Z",
+  "effective_hint": "current",
+  "indexed_extract": {
+    "summary": "DIR explains the 1:5 minimum ratio and notes craft/program-specific exemptions, including Northern California Operating Engineers 1:4.",
+    "key_points": [
+      "Minimum ratio is 5 journeymen hours to 1 apprentice hour per craft, straight time only.",
+      "Specific programs may have different maximum/minimum ratios.",
+      "Northern California Operating Engineers example uses 1 apprentice for each 4 journeymen."
+    ]
+  },
+  "normalization_targets": [
+    "apprentice_ratio_rule",
+    "craft_ratio_override"
+  ],
+  "seed_priority": "high",
+  "status": "indexed",
+  "notes": "Important for modeling craft-specific ratio overrides separately from default rule."
+}

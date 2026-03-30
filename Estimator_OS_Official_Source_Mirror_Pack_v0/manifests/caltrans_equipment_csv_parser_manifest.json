@@ -1,0 +1,25 @@
+{
+  "manifest_version": "0.1.0",
+  "parser_code": "caltrans_equipment_csv_parser",
+  "parser_version": "0.1.0",
+  "source_code": "caltrans_equipment_rate_book_page",
+  "parse_family": "equipment_csv",
+  "source_type": "csv",
+  "jurisdiction_code": "ca",
+  "output_tables": [
+    "equipment_rate_book",
+    "equipment_rate_entry"
+  ],
+  "required_outputs": [
+    "rate_book_code",
+    "equipment_code",
+    "description",
+    "rate_period"
+  ],
+  "normalization_rules": [
+    "Treat accessible CSV as canonical public-works equipment seed source.",
+    "Normalize effective window from source cycle metadata.",
+    "If labor surcharge exists separately, preserve linkage in metadata_json."
+  ]
+}
+

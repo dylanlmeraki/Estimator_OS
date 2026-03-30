@@ -1,0 +1,6 @@
+source_id,source_type,title,url,cycle,effective_start,effective_end,canonical_for,notes
+dir_pwd_journeyman_menu_2026_1,official_page,DIR Journeyman Prevailing Wage Menu,https://www.dir.ca.gov/DLSR/PWD/,2026-1,2026-02-22,,public_works_wages,Treat as canonical public-works journeyman source.
+dir_pwd_apprentice_menu_2026_1,official_page,DIR Apprentice Prevailing Wage Menu,https://www.dir.ca.gov/DLSR/PWD/,2026-1,2026-02-22,,public_works_apprentice_wages,Treat as canonical public-works apprentice source.
+dir_das_publicworks_requirements,official_page,DIR DAS Public Works Apprenticeship Requirements,https://www.dir.ca.gov/das/publicworks.html,,,,apprentice_ratio_obligation,"$30k threshold, DAS 140/142 obligations, ratio context."
+dir_das_140_form,official_pdf,DAS 140 Form,https://dir.ca.gov/DAS/DASForm140.pdf,,,,checklist_reference,"Use as linkable form reference, not a price source."
+dir_das_142_form,official_pdf,DAS 142 Form,https://www.dir.ca.gov/das/dasform142.pdf,,,,checklist_reference,"Use as linkable form reference, not a price source."

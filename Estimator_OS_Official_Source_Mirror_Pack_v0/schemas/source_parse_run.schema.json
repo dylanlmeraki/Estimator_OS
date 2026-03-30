@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://estimatoros.dev/schemas/source_parse_run.schema.json",
+  "title": "SourceParseRun",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "source_code",
+    "parser_code",
+    "parser_version",
+    "parse_family",
+    "status",
+    "started_at"
+  ],
+  "properties": {
+    "source_code": {
+      "type": "string"
+    },
+    "parser_code": {
+      "type": "string"
+    },
+    "parser_version": {
+      "type": "string"
+    },
+    "parse_family": {
+      "type": "string",
+      "enum": [
+        "fee_schedule_pdf",
+        "regulatory_pdf",
+        "equipment_csv",
+        "generic"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "queued",
+        "running",
+        "succeeded",
+        "partial",
+        "failed"
+      ]
+    },
+    "started_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "completed_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "input_asset_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "parsed_row_counts": {
+      "type": "object"
+    },
+    "promoted_row_counts": {
+      "type": "object"
+    },
+    "metadata_json": {
+      "type": "object"
+    }
+  }
+}
+

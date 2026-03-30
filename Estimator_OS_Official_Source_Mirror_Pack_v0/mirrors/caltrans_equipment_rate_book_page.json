@@ -1,0 +1,28 @@
+{
+  "source_code": "caltrans_equipment_rate_book_page",
+  "title": "Caltrans Equipment Rental Rates and Labor Surcharge",
+  "source_url": "https://dot.ca.gov/programs/construction/equipment-rental-rates-and-labor-surcharge",
+  "source_type": "html_page",
+  "jurisdiction_scope": [
+    "CA"
+  ],
+  "authority_type": "state",
+  "retrieved_at": "2026-03-30T00:00:00Z",
+  "effective_hint": "04/01/2025-03/31/2026",
+  "indexed_extract": {
+    "summary": "Caltrans publishes labor surcharge and equipment rental rate books in PDF and accessible CSV, including 04/01/2025 through 03/31/2026.",
+    "key_points": [
+      "Accessible CSV files exist and should be treated as canonical public-works equipment seed inputs.",
+      "The current cycle listed is 04/01/2025 through 03/31/2026.",
+      "Model as effective-dated equipment rate books with ingestion manifests."
+    ]
+  },
+  "normalization_targets": [
+    "equipment_rate_book",
+    "equipment_rate_entry",
+    "source_registry"
+  ],
+  "seed_priority": "canonical",
+  "status": "indexed",
+  "notes": "Canonical public-works equipment rate source."
+}

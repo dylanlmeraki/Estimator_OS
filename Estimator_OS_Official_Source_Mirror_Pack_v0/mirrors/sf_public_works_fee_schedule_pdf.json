@@ -1,0 +1,28 @@
+{
+  "source_code": "sf_public_works_fee_schedule_pdf",
+  "title": "2025-2026 San Francisco Public Works Permit Fee Schedule",
+  "source_url": "https://sfpublicworks.org/sites/default/files/permit_fee_schedule.pdf",
+  "source_type": "pdf",
+  "jurisdiction_scope": [
+    "San Francisco"
+  ],
+  "authority_type": "city_county",
+  "retrieved_at": "2026-03-30T00:00:00Z",
+  "effective_hint": "2025-2026",
+  "indexed_extract": {
+    "summary": "Public Works permit fee schedule lists permit fee amounts and basis-of-fee entries, including street space and consultation/pre-application fees.",
+    "key_points": [
+      "Use as fee evidence source for right-of-way and excavation-related placeholders.",
+      "Needs PDF-to-markdown or table extraction for structured fee seeding.",
+      "Should be mirrored as a parsed fee schedule source document."
+    ]
+  },
+  "normalization_targets": [
+    "fee_schedule_source",
+    "fee_schedule_entry",
+    "jurisdiction_rule_template"
+  ],
+  "seed_priority": "canonical",
+  "status": "queued_for_download",
+  "notes": "Download and table-extract in the next mirror pass."
+}
